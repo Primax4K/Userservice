@@ -1,0 +1,11 @@
+﻿version: '3.5'
+services:
+  userservice:
+    container_name: "user_service"
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+    network_mode: "host"
+    restart: always
+    environment:
+      - TZ=Europe/Vienna
